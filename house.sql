@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 21/02/2022 20:29:02
+ Date: 21/02/2022 21:22:53
 */
 
 SET NAMES utf8mb4;
@@ -53,15 +53,16 @@ CREATE TABLE `t_house`  (
   `house_detailes_img` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '房屋详细页面展示图片',
   `publisher` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '管理员' COMMENT '发布人',
   `publish_time` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP COMMENT '发布时间',
+  `pass_audit` int(1) NOT NULL COMMENT '是否审核通过 1通过 0 未通过',
   PRIMARY KEY (`h_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 33 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_house
 -- ----------------------------
-INSERT INTO `t_house` VALUES (30, '碧家全新公寓 东坑店 高颜值配置 24H管家', '1室0厅1卫', '20', '中层/9层', '整租', 600, '东坑城区', 'http://localhost:8090/static/img/pc0_9MBfWEFgK.jpg', '碧桂园豪庭一期', '13813813800', '南北', 'http://localhost:8090/static/img/pc0_9MBfWEFgK.jpg~http://localhost:8090/static/img/b3be60f4-1db7-4f30-b739-bb33f0b0b74e_1000.jpg~http://localhost:8090/static/img/dca05f50-99f6-471a-a8ea-34c426153951_1000.jpg~', 'wym', '2019-12-12 00:28:43');
-INSERT INTO `t_house` VALUES (31, '温馨一房一厅拎包入住，业主急租，看房方便', '1室1厅1卫', '55', '中层/30层', '合租', 1700, '虎门万达中心', 'http://localhost:8090/static/img/pc1_C5B5lnMLr_1.jpg.1440x1080.jpg', '虎门万达广场', '18818818822', '东西', 'http://localhost:8090/static/img/pc0_hFZRdZLcF_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_KjAN71puf_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_qrsdjowCK_1.jpg.1440x1080.jpg~', 'wym', '2019-12-12 00:32:02');
-INSERT INTO `t_house` VALUES (32, '市政中心 豪装修5房2厅 宽敞明亮 温馨舒适体验家的感觉', '5室2厅2卫 ', '283', '低层/16层', '整租', 10000, '南城行政中心', 'http://localhost:8090/static/img/pc0_KjAN71puf_1.jpg.1440x1080.jpg', '凯名轩', '16816816800', '南北', 'http://localhost:8090/static/img/pc1_C5B5lnMLr_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_hFZRdZLcF_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_KjAN71puf_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_qrsdjowCK_1.jpg.1440x1080.jpg~', 'wym', '2019-12-12 00:36:46');
+INSERT INTO `t_house` VALUES (30, '碧家全新公寓 东坑店 高颜值配置 24H管家', '1室0厅1卫', '20', '中层/9层', '整租', 600, '东坑城区', 'http://localhost:8090/static/img/pc0_9MBfWEFgK.jpg', '碧桂园豪庭一期', '13813813800', '南北', 'http://localhost:8090/static/img/pc0_9MBfWEFgK.jpg~http://localhost:8090/static/img/b3be60f4-1db7-4f30-b739-bb33f0b0b74e_1000.jpg~http://localhost:8090/static/img/dca05f50-99f6-471a-a8ea-34c426153951_1000.jpg~', 'wym', '2019-12-12 00:28:43', 1);
+INSERT INTO `t_house` VALUES (31, '温馨一房一厅拎包入住，业主急租，看房方便', '1室1厅1卫', '55', '中层/30层', '合租', 1700, '虎门万达中心', 'http://localhost:8090/static/img/pc1_C5B5lnMLr_1.jpg.1440x1080.jpg', '虎门万达广场', '18818818822', '东西', 'http://localhost:8090/static/img/pc0_hFZRdZLcF_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_KjAN71puf_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_qrsdjowCK_1.jpg.1440x1080.jpg~', 'wym', '2019-12-12 00:32:02', 1);
+INSERT INTO `t_house` VALUES (32, '市政中心 豪装修5房2厅 宽敞明亮 温馨舒适体验家的感觉', '5室2厅2卫 ', '283', '低层/16层', '整租', 10000, '南城行政中心', 'http://localhost:8090/static/img/pc0_KjAN71puf_1.jpg.1440x1080.jpg', '凯名轩', '16816816800', '南北', 'http://localhost:8090/static/img/pc1_C5B5lnMLr_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_hFZRdZLcF_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_KjAN71puf_1.jpg.1440x1080.jpg~http://localhost:8090/static/img/pc0_qrsdjowCK_1.jpg.1440x1080.jpg~', 'wym', '2019-12-12 00:36:46', 1);
 
 -- ----------------------------
 -- Table structure for t_order
